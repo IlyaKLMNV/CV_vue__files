@@ -1,0 +1,57 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  /* colors */
+    --colorBackgroundMain : #171614;
+    --colorBackgroundBack : #2E2E2B;
+    --colorСontrasting : #FEA609;
+    --colorTextWhite: #fff;
+    --colorTextGray: #A49F93;
+    --colorShadowBG: #372C19;
+
+    /* fonts */
+    --fontTitle : SonnyVol2-ExtraBold, Helvetica, Arial;
+    --fontSubTitle : Familiar_pro, Helvetica, Arial;
+    --fontText : Delm-Regular, Helvetica, Arial;
+}
+
+@font-face {
+  font-family: "SonnyVol2-ExtraBold";
+  src: local("SonnyVol2"),
+  url(../fonts/SonnyVol2/SonnyVol2-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Familiar_pro";
+  src: local("familiar_pro"),
+  url(../fonts/familiar_pro/Familiar_Pro-Bold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Delm-Regular";
+  src: local("Delm"),
+  url(../fonts/Delm/Delm-Regular.ttf) format("truetype");
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
