@@ -1,20 +1,17 @@
 <template>
   <div class="content">
-    
-    <div ref="indicator" class="indicator">
-      <div class="lighter"></div>
-      <div class="lighter"></div>
-      <div class="lighter"></div>
-      <div class="lighter"></div>
-    </div>
-
-    <nav class="fontSubTitle navigation-bar">
-      <router-link to="/"> About </router-link>
-      <router-link to="/stack"> Stack </router-link>
-      <router-link to="/portfolio"> Portfolio </router-link>
-      <router-link to="/contacts"> Contacts </router-link>
-    </nav>
-
+      <div ref="indicator" class="indicator">
+        <div class="lighter"></div>
+        <div class="lighter"></div>
+        <div class="lighter"></div>
+        <div class="lighter"></div>
+      </div>
+      <nav class="fontSubTitle navigation-bar">
+        <router-link to="/"> About </router-link>
+        <router-link to="/stack"> Stack </router-link>
+        <router-link to="/portfolio"> Portfolio </router-link>
+        <router-link to="/contacts"> Contacts </router-link>
+      </nav>
     <router-view v-slot="{ Component }">
       <transition 
         :enter-active-class="canAppeareFromLeft ? fadeInLeft : fadeInRight"
@@ -24,22 +21,13 @@
         <component :is="Component" />
       </transition>
     </router-view>
-
-
-
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
-    
   </div>
-
-
-
 </template>
 
 <script>
-
-
 export default {
   data() {
     return {
@@ -73,8 +61,6 @@ export default {
     
   }
 }
-
-
 </script>
 
 <style>
@@ -116,7 +102,7 @@ export default {
     position: fixed;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     top: 40px;
     right: 60px;
     width: 100px;
@@ -129,7 +115,6 @@ export default {
     height: 20px;
     border-radius: 50%;
     background: var(--colorShadowBG);
-    margin-bottom: 10px;
   }
 
   .--active {
@@ -138,7 +123,7 @@ export default {
 
   .navigation-bar {
     position: absolute;
-    top: 50px;
+    top: 40px;
     width: 500px;
     z-index: 1;
     display: flex;
@@ -150,7 +135,6 @@ export default {
     position: absolute;
     margin: 50px;
     background: var(--colorBackgroundMain);
-
   }
 
   .fontTitle {
@@ -168,7 +152,7 @@ export default {
   }
   .fontText {
     font-family: var(--fontText);
-    color: var(--colorTextGray);
+    color: var(--colorTextWhite);
     font-size: 1.3rem;
     line-height: 120%;
     letter-spacing: 1px;
@@ -179,18 +163,6 @@ export default {
     --animate-opacity: 1;
 
   }
-
-
-  /* .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.5s ease-out;
-  } */
-
 
   .bg {
   animation:slide 10s ease-in-out infinite alternate;
@@ -221,4 +193,41 @@ export default {
     transform:translateX(20%);
   }
 }
+
+@media (max-width: 840px){
+  .page {
+    padding: 0;
+    margin: 0;
+  }
+  .indicator {
+    display: none;
+  }
+  .indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 610px){
+  .navigation-bar {
+    width: 380px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .fontSubTitle {
+    font-family: var(--fontSubTitle);
+    color: var(--colorTextWhite);
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+  .fontText {
+    font-family: var(--fontText);
+    color: var(--colorTextWhite);
+    font-size: 1.0rem;
+    line-height: 120%;
+    letter-spacing: 1px;
+  }
+
+}
+
 </style>

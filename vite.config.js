@@ -2,10 +2,11 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { ViteImageOptimizer } from '../node_modules/vite-plugin-image-optimizer'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/CV_vue__files/',
   plugins: [
     vue(),
     ViteImageOptimizer(),
@@ -16,4 +17,3 @@ export default defineConfig({
     }
   }
 })
-
