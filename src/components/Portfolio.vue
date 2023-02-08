@@ -9,7 +9,7 @@
 			</el-carousel-item>
 			<el-carousel-item>
 				<a href="https://ilyaklmnv.github.io/Fairy-Forest-Parallax-effect-" target="_blank">
-					<img src="../assets/Portfolio/Fairy forest.png" style="width: 100%; height: 100%;">
+					<img src="../assets/Portfolio/Fairy-forest.png" style="width: 100%; height: 100%;">
 				</a>
 			</el-carousel-item>
 			<el-carousel-item>
